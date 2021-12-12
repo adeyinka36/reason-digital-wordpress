@@ -1,9 +1,9 @@
 FROM node:lts-alpine
 WORKDIR /app
-COPY vue-front/package*.json ./
-COPY vue-front/. ./
-
+COPY front/package*.json ./
+COPY front/. ./
 RUN npm install
 RUN npm run build
-EXPOSE 8200
+EXPOSE 8081
 CMD ["npm", "run", "serve"]
+

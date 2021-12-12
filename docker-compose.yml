@@ -44,14 +44,14 @@ services:
     vue:
         build:
             context: .
-            dockerfile: Dockerfiles/vue.dockerfile
+            dockerfile: front/Dockerfile
         depends_on:
             - db
         networks:
             - wp
-        volumes: ['./vue-front:/app']
+        volumes: ['./front:/app']
         ports:
-            - '8200:8200'
+            - '8081:8081'
 networks:
     wp:
 volumes:
